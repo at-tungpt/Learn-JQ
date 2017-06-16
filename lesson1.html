@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script language="javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script language="javascript" src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<h1>jQuery</h1>
+
+<input type="text" id="id-textbox"/> <br/>
+<input type="button" id="id-button" value="Like" />
+<p></p>
+<h2 id="bill"></h2>
+<!--<h2 id="bill" hidden>Bill: a piece of paper that shows how many you owe sb for goods services</h2>-->
+<h2 id="order" ></h2>
+<h2 id="clear" ></h2>
+<h2 id="show-up"></h2>
+
+
+
+<script language="javascript">
+    $(document).ready(function() {
+        $('#id-button').click(function () {
+//            var value = document.getElementById('id-textbox').value;
+//            alert(value);
+//            $('#id-button').prop('disabled', true);
+//            $('#id-button').html('haha');
+            if ($("#id-button").val() == "Like")
+            {
+                $("#id-button").val("DisLike");
+            } else {
+                $("#id-button").val("Like");
+            }
+            switch(document.getElementById('id-textbox').value){
+                case "Bill":
+                    $('#bill').html('Bill: a piece of paper that shows how many you owe sb for goods services');
+                    break;
+                case "Order":
+                    $('#order').html('Oder: a request to make or supply goods');
+                    break;
+                case "Clear":
+                    $('#clear').html('Clear: without clouds or mist');
+                    break;
+                case "Show up":
+                    $('#show-up').html('Show up: to arrive where you have arranged to meet sb or do sth');
+                    break;
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

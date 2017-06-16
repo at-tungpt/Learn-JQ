@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Đổi màu nhé</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <style type="text/css">
+        .yellow{
+            background: yellow;
+            height: 200px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .red{
+            background: red;
+            height: 200px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+
+        }
+        #button-dao-nguoc{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .colored {
+            background: green;
+        }
+    </style>
+</head>
+<div class="yellow"></div>
+<div class="red"></div>
+<div class="content">
+    <input type="text" id="age_student">
+</div>
+<input type="button" value="Đảo Ngược Màu" id="button-dao-nguoc"/>
+</body>
+<script>
+        $(document).ready(function() {
+            $('#button-dao-nguoc').click(function () {
+                var object = $('div');
+                for (var i = 0; i <= object.length; i++) {
+                    if ($(object[i]).hasClass('red')) {
+                        $(object[i]).removeClass('red').addClass('yellow');
+                    } else {
+                        $(object[i]).removeClass('yellow').addClass('red');
+                    }
+                }
+            });
+    $('#age_student').click(function () {
+        var ageStudent = $('content').html();
+        alert(ageStudent);
+    });
+        });
+
+</script>
+</html>
